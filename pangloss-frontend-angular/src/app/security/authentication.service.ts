@@ -30,14 +30,11 @@ export class AuthenticationService {
   }
 
   authenticate(username: string, password: string) {
-    return this.retrieveCsrfToken()
-      .pipe(flatMap((res) => {
-        const loginRequest = new HttpParams()
-          .set(`username`, username)
-          .set(`password`, password)
+    const loginRequest = new HttpParams()
+            .set(`username`, username)
+            .set(`password`, password)
 
-        return this.http.post<any>(`${environment.apiUrl}/login`, loginRequest, { withCredentials: true })
-      }));
+    return this.http.post<any>(`${environment.apiUrl}/login`, loginRequest, { withCredentials: true })
   }
 
   retrieveCsrfToken() {
