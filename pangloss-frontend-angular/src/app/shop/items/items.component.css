@@ -1,0 +1,24 @@
+.item-card {
+  height: 300px;
+  width: 300px;
+  text-align: center;
+}
+
+.items {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.item-image {
+  max-height: 200px;
+  max-width: 200px;
+  object-fit: contain;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.buy{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

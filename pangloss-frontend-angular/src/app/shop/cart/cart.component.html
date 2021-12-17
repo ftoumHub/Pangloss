@@ -1,0 +1,18 @@
+<div class="cart" *ngIf="cart">
+  <div class="cart-title mat-h2">
+      <mat-icon class="cart-icon" color="primary">shopping_cart</mat-icon>Cart
+  </div>
+  <mat-list>
+    <mat-list-item class="item" *ngFor="let item of cart.items">
+      <img mat-card-image src="assets/images/items/{{item.id}}.png" class="item-cart-image">
+      <div>{{item.name}} - {{item.price}} €</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+  <h3 class="mat-h3">Shipping to</h3>
+  <mat-form-field>
+    <input matInput [(ngModel)]="cart.address" (change)="changeAddress()" placeholder="Address">
+  </mat-form-field>
+  <div class="error" [hidden]=!hasErrors>{{errorMessage}}</div>
+  <button class="purchase" mat-raised-button [disabled]="!isPurchasable()" (click)="purchase()" color="primary">Purchase</button>
+</div>

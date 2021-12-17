@@ -1,0 +1,29 @@
+.shop{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 90%;
+}
+
+.categories-menu{
+    width: 10%
+}
+
+.categories{
+    padding-top: 0px;  
+}
+
+.selected {
+    background-color: #673AB7 !important;
+    color: white;
+}
+
+.cart{
+    width: 20%
+}
+
+.content{
+    margin: 20px;
+}
+
+  
